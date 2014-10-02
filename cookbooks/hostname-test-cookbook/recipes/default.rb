@@ -7,10 +7,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
-certificate_manage "wildcard" do
-	nginx_cert true
-end
+certificate_manage "wildcard"
 
-template "/root/fqdn_test" do
+template "/home/vagrant/fqdn_test" do
 	source "fqdn_test.erb"
+	owner "vagrant"
+	group "vagrant"
 end
