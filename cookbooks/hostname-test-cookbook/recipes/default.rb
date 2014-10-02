@@ -7,7 +7,11 @@
 # All rights reserved - Do Not Redistribute
 #
 
-certificate_manage "wildcard"
+certificate_manage "wildcard" do
+	cert_file lazy { "#{node['fqdn']}.pem" }
+	key_file lazy { "#{node['fqdn']}.key" }
+	chain_file lazy { "#{node['fqdn']}-bundle.crt" }
+end
 
 template "/home/vagrant/fqdn_test" do
 	source "fqdn_test.erb"
