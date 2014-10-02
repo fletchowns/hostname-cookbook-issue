@@ -1,0 +1,334 @@
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'opscode-centos-6.5'...
+[KProgress: 30%[KProgress: 40%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+==> default: Setting the name of the VM: hostname-test-cookbook_default_1412224808424_38523
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 22 => 2222 (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Connection timeout. Retrying...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+==> default: Mounting shared folders...
+    default: /vagrant => C:/Users/Greg Barker/git_repos/hostname-test/cookbooks/hostname-test-cookbook
+    default: /tmp/vagrant-chef-3/chef-solo-2/roles => C:/Users/Greg Barker/git_repos/hostname-test/roles
+    default: /tmp/vagrant-chef-3/chef-solo-1/cookbooks => C:/Users/Greg Barker/git_repos/hostname-test/cookbooks
+    default: /tmp/vagrant-chef-3/chef-solo-3/data_bags => C:/Users/Greg Barker/git_repos/hostname-test/data_bags
+==> default: Installing Chef 11.16.2 Omnibus package...
+==> default: Downloading Chef 11.16.2 for el...
+==> default: downloading https://www.getchef.com/chef/metadata?v=11.16.2&prerelease=false&nightlies=false&p=el&pv=6&m=x86_64
+==> default:   to file /tmp/install.sh.2289/metadata.txt
+==> default: trying wget...
+==> default: trying curl...
+==> default: url	https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chef-11.16.2-1.el6.x86_64.rpm
+==> default: md5	8731b6558009fc322f6469b415a759f8
+==> default: sha256	dc7bc9d6084d29ffec67664fdae455406c3e7657c4aebcbef19f5a9ba459db37
+==> default: downloaded metadata file looks valid...
+==> default: downloading https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chef-11.16.2-1.el6.x86_64.rpm
+==> default:   to file /tmp/install.sh.2289/chef-11.16.2-1.el6.x86_64.rpm
+==> default: trying wget...
+==> default: Comparing checksum with sha256sum...
+==> default: Installing Chef 11.16.2
+==> default: installing with rpm...
+==> default: warning: /tmp/install.sh.2289/chef-11.16.2-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+==> default: Preparing...                
+==> default: ##################################################
+==> default: chef                        
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: ##
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: #
+==> default: Thank you for installing Chef!
+==> default: Running provisioner: chef_solo...
+Uploading chef encrypted data bag secret key...
+Generating chef JSON and uploading...
+==> default: Running chef-solo...
+==> default: [2014-10-02T04:41:00+00:00] INFO: Forking chef instance to converge...
+==> default: [2014-10-02T04:41:00+00:00] DEBUG: Fork successful. Waiting for new chef pid: 2702
+==> default: [2014-10-02T04:41:00+00:00] DEBUG: Forked instance now converging
+==> default: [2014-10-02T04:41:00+00:00] WARN: 
+==> default: * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+==> default: SSL validation of HTTPS requests is disabled. HTTPS connections are still
+==> default: encrypted, but chef is not able to detect forged replies or man in the middle
+==> default: attacks.
+==> default: 
+==> default: To fix this issue add an entry like this to your configuration file:
+==> default: 
+==> default: ```
+==> default:   # Verify all HTTPS connections (recommended)
+==> default:   ssl_verify_mode :verify_peer
+==> default: 
+==> default:   # OR, Verify only connections to chef-server
+==> default:   verify_api_cert true
+==> default: ```
+==> default: 
+==> default: To check your SSL configuration, or troubleshoot errors, you can use the
+==> default: `knife ssl check` command like so:
+==> default: 
+==> default: ```
+==> default:   knife ssl check -c /tmp/vagrant-chef-3/solo.rb
+==> default: ```
+==> default: 
+==> default: * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+==> default: [2014-10-02T04:41:00+00:00] INFO: *** Chef 11.16.2 ***
+==> default: [2014-10-02T04:41:00+00:00] INFO: Chef-client pid: 2702
+==> default: [2014-10-02T04:41:00+00:00] DEBUG: Chef-client request_id: f0d30aa6-8bb8-4c49-bd6f-ef3a1168c02f
+==> default: [2014-10-02T04:41:01+00:00] DEBUG: Building node object for mybox
+==> default: [2014-10-02T04:41:01+00:00] DEBUG: Extracting run list from JSON attributes provided on command line
+==> default: [2014-10-02T04:41:01+00:00] INFO: Setting the run_list to ["role[base]", "recipe[hostname-test-cookbook]"] from CLI options
+==> default: [2014-10-02T04:41:01+00:00] DEBUG: Applying attributes from json file
+==> default: [2014-10-02T04:41:01+00:00] DEBUG: Platform is centos version 6.5
+==> default: [2014-10-02T04:41:01+00:00] INFO: Run List is [role[base], recipe[hostname-test-cookbook]]
+==> default: [2014-10-02T04:41:01+00:00] INFO: Run List expands to [hostname, hostname-test-cookbook]
+==> default: [2014-10-02T04:41:01+00:00] INFO: Starting Chef Run for mybox
+==> default: [2014-10-02T04:41:01+00:00] INFO: Running start handlers
+==> default: [2014-10-02T04:41:01+00:00] INFO: Start handlers complete.
+==> default: [2014-10-02T04:41:01+00:00] DEBUG: No chefignore file found at /tmp/vagrant-chef-3/chef-solo-1/chefignore no files will be ignored
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Cookbooks to compile: [:hostsfile, :hostname, :certificate, :"hostname-test-cookbook"]
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading cookbook hostsfile's library file: /tmp/vagrant-chef-3/chef-solo-1/cookbooks/hostsfile/libraries/entry.rb
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading cookbook hostsfile's library file: /tmp/vagrant-chef-3/chef-solo-1/cookbooks/hostsfile/libraries/manipulator.rb
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading cookbook hostsfile's library file: /tmp/vagrant-chef-3/chef-solo-1/cookbooks/hostsfile/libraries/matchers.rb
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading cookbook certificate's library file: /tmp/vagrant-chef-3/chef-solo-1/cookbooks/certificate/libraries/matchers.rb
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Node mybox loading cookbook hostsfile's attribute file /tmp/vagrant-chef-3/chef-solo-1/cookbooks/hostsfile/attributes/default.rb
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading Attribute hostsfile::default
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Node mybox loading cookbook hostname's attribute file /tmp/vagrant-chef-3/chef-solo-1/cookbooks/hostname/attributes/default.rb
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading Attribute hostname::default
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Node mybox loading cookbook certificate's attribute file /tmp/vagrant-chef-3/chef-solo-1/cookbooks/certificate/attributes/defaults.rb
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading Attribute certificate::defaults
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Node mybox loading cookbook hostname-test-cookbook's attribute file /tmp/vagrant-chef-3/chef-solo-1/cookbooks/hostname-test-cookbook/attributes/default.rb
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading Attribute hostname-test-cookbook::default
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading cookbook hostsfile's providers from /tmp/vagrant-chef-3/chef-solo-1/cookbooks/hostsfile/providers/entry.rb
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loaded contents of /tmp/vagrant-chef-3/chef-solo-1/cookbooks/hostsfile/providers/entry.rb into a provider named hostsfile_entry defined in Chef::Provider::HostsfileEntry
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading cookbook hostsfile's resources from /tmp/vagrant-chef-3/chef-solo-1/cookbooks/hostsfile/resources/entry.rb
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loaded contents of /tmp/vagrant-chef-3/chef-solo-1/cookbooks/hostsfile/resources/entry.rb into a resource named hostsfile_entry defined in Chef::Resource::HostsfileEntry
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading cookbook certificate's providers from /tmp/vagrant-chef-3/chef-solo-1/cookbooks/certificate/providers/manage.rb
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loaded contents of /tmp/vagrant-chef-3/chef-solo-1/cookbooks/certificate/providers/manage.rb into a provider named certificate_manage defined in Chef::Provider::CertificateManage
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading cookbook certificate's resources from /tmp/vagrant-chef-3/chef-solo-1/cookbooks/certificate/resources/manage.rb
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loaded contents of /tmp/vagrant-chef-3/chef-solo-1/cookbooks/certificate/resources/manage.rb into a resource named certificate_manage defined in Chef::Resource::CertificateManage
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading Recipe hostname via include_recipe
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Found recipe default in cookbook hostname
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading Recipe hostname-test-cookbook via include_recipe
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Found recipe default in cookbook hostname-test-cookbook
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Loading from cookbook_path: /tmp/vagrant-chef-3/chef-solo-1/cookbooks
+==> default: [2014-10-02T04:41:02+00:00] DEBUG: Converging node mybox
+==> default: [2014-10-02T04:41:02+00:00] INFO: Processing ruby_block[Update /etc/sysconfig/network] action run (hostname::default line 61)
+==> default: [2014-10-02T04:41:02+00:00] INFO: ruby_block[Update /etc/sysconfig/network] called
+==> default: [2014-10-02T04:41:02+00:00] INFO: ruby_block[Update /etc/sysconfig/network] sending reload action to ohai[reload] (immediate)
+==> default: [2014-10-02T04:41:02+00:00] INFO: Processing ohai[reload] action reload (hostname::default line 115)
+==> default: [2014-10-02T04:41:03+00:00] INFO: ohai[reload] reloaded
+==> default: [2014-10-02T04:41:03+00:00] INFO: Processing ruby_block[Update /etc/sysctl.conf] action run (hostname::default line 71)
+==> default: [2014-10-02T04:41:03+00:00] INFO: ruby_block[Update /etc/sysctl.conf] called
+==> default: [2014-10-02T04:41:03+00:00] INFO: ruby_block[Update /etc/sysctl.conf] sending reload action to ohai[reload] (immediate)
+==> default: [2014-10-02T04:41:03+00:00] INFO: Processing ohai[reload] action reload (hostname::default line 115)
+==> default: [2014-10-02T04:41:04+00:00] INFO: ohai[reload] reloaded
+==> default: [2014-10-02T04:41:04+00:00] INFO: Processing execute[hostname mybox] action run (hostname::default line 80)
+==> default: [2014-10-02T04:41:04+00:00] INFO: execute[hostname mybox] ran successfully
+==> default: [2014-10-02T04:41:04+00:00] INFO: execute[hostname mybox] sending reload action to ohai[reload] (immediate)
+==> default: [2014-10-02T04:41:04+00:00] INFO: Processing ohai[reload] action reload (hostname::default line 115)
+==> default: [2014-10-02T04:41:06+00:00] INFO: ohai[reload] reloaded
+==> default: [2014-10-02T04:41:06+00:00] INFO: Processing service[network] action restart (hostname::default line 84)
+==> default: [2014-10-02T04:41:06+00:00] DEBUG: service[network] supports status, running
+==> default: [2014-10-02T04:41:06+00:00] DEBUG: service[network] is running
+==> default: [2014-10-02T04:41:11+00:00] INFO: service[network] restarted
+==> default: [2014-10-02T04:41:11+00:00] INFO: Processing hostsfile_entry[localhost] action append (hostname::default line 101)
+==> default: [2014-10-02T04:41:11+00:00] INFO: Processing file[/etc/hosts] action create (dynamically defined)
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: file[/etc/hosts] checksumming file at /etc/hosts.
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: calculating checksum of /tmp/.hosts20141002-2702-k354kv to compare with 498f494232085ec83303a2bc6f04bea840c2b210fbbeda31a46a6e5674d4fc0e
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: running: diff -u /etc/hosts /tmp/.hosts20141002-2702-k354kv
+==> default: [2014-10-02T04:41:11+00:00] INFO: file[/etc/hosts] backed up to /var/chef/backup/etc/hosts.chef-20141002044111.304952
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: reading modes from /etc/hosts file
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: applying mode = 644, uid = 0, gid = 0 to /tmp/.hosts20141002-2702-k354kv
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: moving temporary file /tmp/.hosts20141002-2702-k354kv into place at /etc/hosts
+==> default: [2014-10-02T04:41:11+00:00] INFO: file[/etc/hosts] updated file contents /etc/hosts
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: found target_mode == nil, so no mode was specified on resource, not managing mode
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: found target_uid == nil, so no owner was specified on resource, not managing owner
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: found target_gid == nil, so no group was specified on resource, not managing group
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: Restoring selinux security content with /sbin/restorecon -R "/etc/hosts"
+==> default: [2014-10-02T04:41:11+00:00] INFO: Processing hostsfile_entry[set hostname] action create (hostname::default line 107)
+==> default: [2014-10-02T04:41:11+00:00] INFO: Processing file[/etc/hosts] action create (dynamically defined)
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: file[/etc/hosts] checksumming file at /etc/hosts.
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: calculating checksum of /tmp/.hosts20141002-2702-14zxjd3 to compare with cc06b0f2292e73b8b6335a5a6ced30671e9230536ac5277736490b231fc4e70b
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: running: diff -u /etc/hosts /tmp/.hosts20141002-2702-14zxjd3
+==> default: [2014-10-02T04:41:11+00:00] INFO: file[/etc/hosts] backed up to /var/chef/backup/etc/hosts.chef-20141002044111.460359
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: reading modes from /etc/hosts file
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: applying mode = 644, uid = 0, gid = 0 to /tmp/.hosts20141002-2702-14zxjd3
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: moving temporary file /tmp/.hosts20141002-2702-14zxjd3 into place at /etc/hosts
+==> default: [2014-10-02T04:41:11+00:00] INFO: file[/etc/hosts] updated file contents /etc/hosts
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: found target_mode == nil, so no mode was specified on resource, not managing mode
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: found target_uid == nil, so no owner was specified on resource, not managing owner
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: found target_gid == nil, so no group was specified on resource, not managing group
+==> default: [2014-10-02T04:41:11+00:00] DEBUG: Restoring selinux security content with /sbin/restorecon -R "/etc/hosts"
+==> default: [2014-10-02T04:41:11+00:00] INFO: hostsfile_entry[set hostname] sending reload action to ohai[reload] (immediate)
+==> default: [2014-10-02T04:41:11+00:00] INFO: Processing ohai[reload] action reload (hostname::default line 115)
+==> default: [2014-10-02T04:41:12+00:00] INFO: ohai[reload] reloaded
+==> default: [2014-10-02T04:41:12+00:00] INFO: Processing ohai[reload] action nothing (hostname::default line 115)
+==> default: [2014-10-02T04:41:12+00:00] DEBUG: Skipping ohai[reload] due to action :nothing
+==> default: [2014-10-02T04:41:12+00:00] INFO: Processing certificate_manage[wildcard] action create (hostname-test-cookbook::default line 10)
+==> default: 
+==> default: ================================================================================
+==> default: Error executing action `create` on resource 'certificate_manage[wildcard]'
+==> default: ================================================================================
+==> default: 
+==> default: Chef::Exceptions::ValidationFailed
+==> default: ----------------------------------
+==> default: Data Bag Items must contain a Hash or Mash!
+==> default: 
+==> default: Cookbook Trace:
+==> default: ---------------
+==> default: /tmp/vagrant-chef-3/chef-solo-1/cookbooks/certificate/providers/manage.rb:37:in `block in class_from_file'
+==> default: 
+==> default: Resource Declaration:
+==> default: ---------------------
+==> default: # In /tmp/vagrant-chef-3/chef-solo-1/cookbooks/hostname-test-cookbook/recipes/default.rb
+==> default: 
+==> default:  10: certificate_manage "wildcard" do
+==> default:  11: 	nginx_cert true
+==> default:  12: end
+==> default:  13: 
+==> default: 
+==> default: Compiled Resource:
+==> default: ------------------
+==> default: # Declared in /tmp/vagrant-chef-3/chef-solo-1/cookbooks/hostname-test-cookbook/recipes/default.rb:10:in `from_file'
+==> default: 
+==> default: certificate_manage("wildcard") do
+==> default:   action :create
+==> default:   retries 0
+==> default:   retry_delay 2
+==> default:   guard_interpreter :default
+==> default:   cookbook_name :"hostname-test-cookbook"
+==> default:   recipe_name "default"
+==> default:   nginx_cert true
+==> default:   data_bag_secret "/tmp/vagrant-chef-3/encrypted_data_bag_secret_key"
+==> default:   data_bag "certificates"
+==> default:   search_id "wildcard"
+==> default: end
+==> default: [2014-10-02T04:41:12+00:00] INFO: Running queued delayed notifications before re-raising exception
+==> default: [2014-10-02T04:41:12+00:00] DEBUG: Re-raising exception: Chef::Exceptions::ValidationFailed - certificate_manage[wildcard] (hostname-test-cookbook::default line 10) had an error: Chef::Exceptions::ValidationFailed: Data Bag Items must contain a Hash or Mash!
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/data_bag_item.rb:75:in `raw_data='
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/data_bag_item.rb:126:in `from_hash'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/data_bag_item.rb:155:in `load'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/encrypted_data_bag_item.rb:122:in `load'
+==> default:   /tmp/vagrant-chef-3/chef-solo-1/cookbooks/certificate/providers/manage.rb:37:in `block in class_from_file'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/provider/lwrp_base.rb:60:in `instance_eval'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/provider/lwrp_base.rb:60:in `recipe_eval_with_update_check'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/provider/lwrp_base.rb:45:in `block in action'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/provider.rb:121:in `run_action'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource.rb:648:in `run_action'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/runner.rb:49:in `run_action'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/runner.rb:81:in `block (2 levels) in converge'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/runner.rb:81:in `each'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/runner.rb:81:in `block in converge'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection.rb:98:in `block in execute_each_resource'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection/stepable_iterator.rb:116:in `call'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection/stepable_iterator.rb:116:in `call_iterator_block'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection/stepable_iterator.rb:85:in `step'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection/stepable_iterator.rb:104:in `iterate'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection.rb:96:in `execute_each_resource'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/runner.rb:80:in `converge'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/client.rb:345:in `converge'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/client.rb:431:in `do_run'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/client.rb:213:in `block in run'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/client.rb:207:in `fork'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/client.rb:207:in `run'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/application.rb:236:in `run_chef_client'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/application/solo.rb:226:in `block in run_application'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/application/solo.rb:218:in `loop'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/application/solo.rb:218:in `run_application'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/application.rb:55:in `run'
+==> default:   /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/bin/chef-solo:25:in `<top (required)>'
+==> default:   /usr/bin/chef-solo:23:in `load'
+==> default:   /usr/bin/chef-solo:23:in `<main>'
+==> default: [2014-10-02T04:41:12+00:00] ERROR: Running exception handlers
+==> default: [2014-10-02T04:41:12+00:00] ERROR: Exception handlers complete
+==> default: [2014-10-02T04:41:12+00:00] FATAL: Stacktrace dumped to /var/chef/cache/chef-stacktrace.out
+==> default: [2014-10-02T04:41:12+00:00] DEBUG: Chef::Exceptions::ValidationFailed: certificate_manage[wildcard] (hostname-test-cookbook::default line 10) had an error: Chef::Exceptions::ValidationFailed: Data Bag Items must contain a Hash or Mash!
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/data_bag_item.rb:75:in `raw_data='
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/data_bag_item.rb:126:in `from_hash'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/data_bag_item.rb:155:in `load'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/encrypted_data_bag_item.rb:122:in `load'
+==> default: /tmp/vagrant-chef-3/chef-solo-1/cookbooks/certificate/providers/manage.rb:37:in `block in class_from_file'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/provider/lwrp_base.rb:60:in `instance_eval'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/provider/lwrp_base.rb:60:in `recipe_eval_with_update_check'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/provider/lwrp_base.rb:45:in `block in action'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/provider.rb:121:in `run_action'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource.rb:648:in `run_action'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/runner.rb:49:in `run_action'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/runner.rb:81:in `block (2 levels) in converge'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/runner.rb:81:in `each'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/runner.rb:81:in `block in converge'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection.rb:98:in `block in execute_each_resource'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection/stepable_iterator.rb:116:in `call'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection/stepable_iterator.rb:116:in `call_iterator_block'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection/stepable_iterator.rb:85:in `step'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection/stepable_iterator.rb:104:in `iterate'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/resource_collection.rb:96:in `execute_each_resource'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/runner.rb:80:in `converge'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/client.rb:345:in `converge'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/client.rb:431:in `do_run'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/client.rb:213:in `block in run'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/client.rb:207:in `fork'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/client.rb:207:in `run'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/application.rb:236:in `run_chef_client'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/application/solo.rb:226:in `block in run_application'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/application/solo.rb:218:in `loop'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/application/solo.rb:218:in `run_application'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/lib/chef/application.rb:55:in `run'
+==> default: /opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.16.2/bin/chef-solo:25:in `<top (required)>'
+==> default: /usr/bin/chef-solo:23:in `load'
+==> default: /usr/bin/chef-solo:23:in `<main>'
+==> default: [2014-10-02T04:41:12+00:00] ERROR: certificate_manage[wildcard] (hostname-test-cookbook::default line 10) had an error: Chef::Exceptions::ValidationFailed: Data Bag Items must contain a Hash or Mash!
+==> default: [2014-10-02T04:41:12+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)

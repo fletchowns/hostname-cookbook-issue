@@ -1,0 +1,11 @@
+{
+	"name": "base",
+	"json_class": "Chef::Role",
+	"description": "The base role",
+	"default_attributes": {
+		"set_fqdn": "*.mycompany.com"
+	},
+	"run_list": [
+		"recipe[hostname]"
+	]
+}
